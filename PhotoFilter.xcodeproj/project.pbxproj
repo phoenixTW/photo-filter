@@ -14,6 +14,7 @@
 		37A7B4D61D744D2D000A430A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37A7B4D41D744D2D000A430A /* LaunchScreen.storyboard */; };
 		37A7B4E11D744D2D000A430A /* PhotoFilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A7B4E01D744D2D000A430A /* PhotoFilterTests.swift */; };
 		37A7B4EC1D744D2D000A430A /* PhotoFilterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A7B4EB1D744D2D000A430A /* PhotoFilterUITests.swift */; };
+		37A7B4FA1D744E74000A430A /* TRAVEL.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 37A7B4F91D744E74000A430A /* TRAVEL.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		37A7B4E71D744D2D000A430A /* PhotoFilterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoFilterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		37A7B4EB1D744D2D000A430A /* PhotoFilterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFilterUITests.swift; sourceTree = "<group>"; };
 		37A7B4ED1D744D2D000A430A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37A7B4F91D744E74000A430A /* TRAVEL.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = TRAVEL.jpg; path = ../../../../../Pictures/Random/TRAVEL.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		37A7B4CA1D744D2D000A430A /* PhotoFilter */ = {
 			isa = PBXGroup;
 			children = (
+				37A7B4F91D744E74000A430A /* TRAVEL.jpg */,
 				37A7B4CB1D744D2D000A430A /* AppDelegate.swift */,
 				37A7B4CD1D744D2D000A430A /* ViewController.swift */,
 				37A7B4CF1D744D2D000A430A /* Main.storyboard */,
@@ -232,6 +235,7 @@
 				37A7B4D61D744D2D000A430A /* LaunchScreen.storyboard in Resources */,
 				37A7B4D31D744D2D000A430A /* Assets.xcassets in Resources */,
 				37A7B4D11D744D2D000A430A /* Main.storyboard in Resources */,
+				37A7B4FA1D744E74000A430A /* TRAVEL.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
