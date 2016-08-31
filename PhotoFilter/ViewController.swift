@@ -34,6 +34,34 @@ class ViewController: UIViewController {
         
     }
     
+    func getDocumentDirectoryPath() -> NSString {
+        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
+        let documentsDirectory = paths[0]
+        return documentsDirectory
+    }
+    
+    func jpegRepresentationOfImage(image: CIImage) -> NSData {
+        let eaglContext = EAGLContext(API: .OpenGLES2)
+        let ciContext = CIContext(EAGLContext: eaglContext)
+        
+        let outputImageRef = ciContext.createCGImage(image, fromRect: image.extent)
+        let uiImage = UIImage(CGImage: outputImageRef, scale: 1.0, orientation: UIImageOrientation.Up)
+        
+        return UIImageJPEGRepresentation(uiImage, 0.9)! //this takes upwards of 20-30 seconds with large photos!
+    }
+    
+    @IBAction func saveFilter(sender: AnyObject) {
+        // Create the image to save
+        let inputImage = CIImage(image: img.image!)
+        let filename = getDocumentDirectoryPath().stringByAppendingPathComponent("Kuchbhi.jpeg")
+        
+        do {
+            try jpegRepresentationOfImage(inputImage).writeToFile(filename, atomically: true, encoding: NSUTF8StringEncoding)
+        } catch {
+            // failed to write file – bad permissions, bad filename, missing permissions, or more likely it can't be converted to the encoding
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

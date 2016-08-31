@@ -30,6 +30,12 @@
                         </constraints>
                     </view>
                     <toolbarItems>
+                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="ei2-sz-weM"/>
+                        <barButtonItem title="Save" id="yDL-Z4-xVB">
+                            <connections>
+                                <action selector="saveFilter:" destination="BYZ-38-t0r" id="YVo-RF-f92"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="CEC-6g-nUv"/>
                         <barButtonItem title="Apply Filter" id="TWh-ZD-DFh">
                             <connections>
