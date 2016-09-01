@@ -53,12 +53,13 @@ class ViewController: UIViewController {
     @IBAction func saveFilter(sender: AnyObject) {
         // Create the image to save
         let inputImage = CIImage(image: img.image!)
-        let filename = getDocumentDirectoryPath().stringByAppendingPathComponent("Kuchbhi.jpeg")
+        let filename = getDocumentDirectoryPath().stringByAppendingPathComponent("\(NSDate()).jpeg")
         
         do {
-            try jpegRepresentationOfImage(inputImage).writeToFile(filename, atomically: true, encoding: NSUTF8StringEncoding)
+            try jpegRepresentationOfImage(inputImage!).writeToFile(filename, atomically: true)
         } catch {
             // failed to write file – bad permissions, bad filename, missing permissions, or more likely it can't be converted to the encoding
+            print("SAVING FAILED")
         }
     }
     
